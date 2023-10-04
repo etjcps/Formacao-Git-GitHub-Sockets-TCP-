@@ -1,9 +1,10 @@
 <?php
+# Código lado Servidor via TCP
 if (FALSE ===($sock_servidor = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)))
 {
 	echo "socket_create() Falhou: Causa: ".socket_strerror($sock_servidor)."\n";
 }
-if (FALSE === ($resultado = socket_bind($sock_servidor, '127.0.0.1', 9000)))
+if (FALSE === ($resultado = socket_bind($sock_servidor, '192.168.1.84', 9000)))
 {
 	echo "socket_bind() Falhou: Causa: ".socket_strerror($resultado)."\n";
 }
